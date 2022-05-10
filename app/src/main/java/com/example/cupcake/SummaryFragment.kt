@@ -53,23 +53,24 @@ class SummaryFragment : Fragment() {
         binding?.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-        }
+            summaryFragment = this@SummaryFragment
         }
     }
 
     /**
      * Submit the order by sharing out the order details to another app via an implicit intent.
      */
-//    fun sendOrder() {
-//
-//        Toast.makeText(activity, "Send Order", Toast.LENGTH_SHORT).show()
-//    }
+    fun sendOrder() {
+
+        Toast.makeText(activity, "Send Order", Toast.LENGTH_SHORT).show()
+    }
 
     /**
      * This fragment lifecycle method is called when the view hierarchy associated with the fragment
      * is being removed. As a result, clear out the binding object.
      */
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        binding = null
-//    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
+}
